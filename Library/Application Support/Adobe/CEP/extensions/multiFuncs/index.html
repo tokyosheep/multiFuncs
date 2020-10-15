@@ -17,9 +17,24 @@
     <div class="container">
         <nav class="nav">
             <ul class="nav__link">
-                <li><input type="radio" class="nav__radio" name="tab" value="setGuide"></li>
-                <li><input type="radio" class="nav__radio" name="tab" value="makeHead"></li>
-                <li><input type="radio" class="nav__radio" name="tab" value="strage"></li>
+                <li>
+                    <label for="setGuide">
+                        <input type="radio" class="nav__radio" name="tab" value="setGuide" id="setGuide" />
+                        <span class="nav__title">set guide</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="makeHead">
+                        <input type="radio" class="nav__radio" name="tab" value="makeHead" id="makeHead" />
+                        <span class="nav__title">make head</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="strage">
+                        <input type="radio" class="nav__radio" name="tab" value="strage"  id="strage" />
+                        <span class="nav__title">strage</span>
+                    </label>
+                </li>
             </ul>
         </nav>
         <!---------------------------------------->     
@@ -32,6 +47,23 @@
                 <input type="number" class="topcoat-text-input" id="marginValue" value="0" min="0" />
                 <button class="topcoat-button" id="marginGuide">set margin guide</button>
             </div>
+            <form action="" class="guideUnit">
+                <label for="mm" class="topcoat-radio-button">
+                    <input type="radio" name="unit" id="mm">
+                    <div class="topcoat-radio-button__checkmark"></div>
+                    mm
+                </label>
+                <label for="point" class="topcoat-radio-button">
+                    <input type="radio" name="unit" id="point">
+                    <div class="topcoat-radio-button__checkmark"></div>
+                    point
+                </label>
+                <label for="centi" class="topcoat-radio-button">
+                    <input type="radio" name="unit" id="centi">
+                    <div class="topcoat-radio-button__checkmark"></div>
+                    centi
+                </label>
+            </form>
         </main>
         <!---------------------------------------->
         <main class="main hide" id="makeHead">
@@ -40,12 +72,12 @@
             </header>
             <button class="topcoat-button" id="makeHead">make head</button>
             <form action="" name="headForm">
-                <label for="" class="topcoat-checkbox">
+                <label for="setDate" class="topcoat-checkbox">
                     <input type="checkBox" name="headForm" class="headForm" id="setDate">
                     <div class="topcoat-checkbox__checkmark"></div>
                     set date
                 </label>
-                <label for="" class="topcoat-checkbox">
+                <label for="setLength" class="topcoat-checkbox">
                     <input type="checkBox" name="headForm" class="headForm" id="setLength">
                     <div class="topcoat-checkbox__checkmark"></div>
                     set length
