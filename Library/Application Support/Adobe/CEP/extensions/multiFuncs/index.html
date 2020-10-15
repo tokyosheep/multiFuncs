@@ -6,19 +6,78 @@
 <link rel="stylesheet" href="css/topcoat-desktop-dark.min.css"/>
 <link  id="hostStyle" rel="stylesheet" href="css/styles.css"/>
 
-<title></title>
+<title>multi funcs</title>
 </head>
 
 <body class="hostElt">
-
-    <div id="content">        
-        
-        <div>                
-            <button id="btn_test" class="topcoat-button--large hostFontSize">Call ExtendScript</button>                
-        </div>   
-        
+    <div id="loading">
+        <div class="loading__circle"></div>
+        <span class="loading__title"></span>
     </div>
-    
+    <div class="container">
+        <nav class="nav">
+            <ul class="nav__link">
+                <li><input type="radio" class="nav__radio" name="tab" value="setGuide"></li>
+                <li><input type="radio" class="nav__radio" name="tab" value="makeHead"></li>
+                <li><input type="radio" class="nav__radio" name="tab" value="strage"></li>
+            </ul>
+        </nav>
+        <!---------------------------------------->     
+        <main class="main" id="setGuide">
+            <header class="header">
+                <h1>set guide</h1>
+            </header>
+            <button class="topcoat-button" id="setCenter">set center guides</button>
+            <div class="guideForm">
+                <input type="number" class="topcoat-text-input" id="marginValue" value="0" min="0" />
+                <button class="topcoat-button" id="marginGuide">set margin guide</button>
+            </div>
+        </main>
+        <!---------------------------------------->
+        <main class="main hide" id="makeHead">
+            <header class="header">
+                <h1>make head</h1>
+            </header>
+            <button class="topcoat-button" id="makeHead">make head</button>
+            <form action="" name="headForm">
+                <label for="" class="topcoat-checkbox">
+                    <input type="checkBox" name="headForm" class="headForm" id="setDate">
+                    <div class="topcoat-checkbox__checkmark"></div>
+                    set date
+                </label>
+                <label for="" class="topcoat-checkbox">
+                    <input type="checkBox" name="headForm" class="headForm" id="setLength">
+                    <div class="topcoat-checkbox__checkmark"></div>
+                    set length
+                </label>
+            </form>
+        </main>
+        <!---------------------------------------->
+        <main class="main hide" id="strage">
+            <header class="header">
+                <h1>strage</h1>
+            </header>
+            <div class="colorList">
+                <ul class="CMYKList">
+                    <li><input type="number" class="topcoat-text-input CMYK" id="cyan" max="100" min="0" value="0" step="1">cyan</li>
+                    <li><input type="number" class="topcoat-text-input CMYK" id="magenta" max="100" min="0" value="0" step="1">magenta</li>
+                    <li><input type="number" class="topcoat-text-input CMYK" id="yellow" max="100" min="0" value="0" step="1">yellow</li>
+                    <li><input type="number" class="topcoat-text-input CMYK" id="black" max="100" min="0" value="0" step="1">black</li>
+                </ul>
+                <ul class="RGBList">
+                    <li><input type="number" class="topcoat-text-input RGB" id="red" max="255" min="0" value="0" step="1">red</li>
+                    <li><input type="number" class="topcoat-text-input RGB" id="green" max="255" min="0" value="0" step="1">green</li>
+                    <li><input type="number" class="topcoat-text-input RGB" id="blue" max="255" min="0" value="0" step="1">blue</li>
+                </ul>
+            </div>
+            <button class="topcoat-button" id="loadColor">load color</button>
+            <button class="topcoat-button" id="pasteColor">paste color</button>
+        </main>
+        <!---------------------------------------->
+        <footer class="footer">
+            <small>developed by kawano</small> 
+        </footer>
+    </div>
     <!-- These are debugging shortcuts.  Class debuglink items only appear in debug mode  -->
     <span class="debuglink" id="reload">Reload</span>
     <span class="debuglink" id="debug">Debug</span>
