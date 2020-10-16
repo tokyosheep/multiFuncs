@@ -1,0 +1,53 @@
+.colorList{
+    margin-bottom: 20px;
+}
+
+    .colorList > ul{
+        padding: 10px;
+        background: rgb(54, 56, 66);
+        border-radius: 5px;
+        width: 80%;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    }
+
+    .CMYKList > li , .RGBList > li{
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 3px;
+        display: inline-block;
+        width: 120px;
+        border: 1px solid #000;
+        background: rgb(49, 50, 53);
+    }
+
+    .colorList__name{
+        margin-left: 3px;
+    }
+
+#cyan{
+    border-bottom: 1px solid rgb(0,255,255);
+}
+
+#magenta{
+    border-bottom: 1px solid rgb(255,0,255);
+}
+
+#yellow{
+    border-bottom: 1px solid rgb(255,255,0);
+}
+
+#black{
+    border-bottom: 1px solid rgb(0,0,0);
+}
+
+#red{
+    border-bottom: 1px solid rgb(255,0,0);
+}
+
+#green{
+    border-bottom: 1px solid rgb(0,255,0);
+}
+
+#blue{
+    border-bottom: 1px solid rgb(0,0,255);
+}

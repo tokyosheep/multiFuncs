@@ -1,7 +1,10 @@
 /*Your styles*/
-
- body {
-    margin: 10px;
+@import url("./color.css");
+@import url("./guide.css");
+@import url("./head.css");
+@import url("./loading.css");
+body {
+    margin: 0;
 }
 
 
@@ -12,14 +15,109 @@
     width:100%;
 }
 
-
-#btn_test{
-    width: 100%;
+ul{
+    list-style: none;
+    padding: 0;
 }
+
+.head-large{
+    margin: 5px 0;
+    font-size: 25px;
+}
+
+.head-small{
+    margin: 2px;
+    font-size: 13px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20px 1fr 20px;
+    grid-template-areas: 
+        "nav"
+        "main"
+        "footer"
+    ;
+}
+
+.nav{
+    grid-area: nav;
+}
+
+.main{
+    grid-area: main;
+    padding: 10px;
+}
+
+.footer{
+    grid-area: footer;
+    padding: 10px;
+}
+
+.nav__form{
+    height: 100%;
+}
+
+.nav__link{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: inherit;
+    margin: 0;
+}
+    .nav__link > li{
+        width: calc(100%/3);
+        display: block;
+        height: 100%;
+        text-align: center;
+        position: relative;
+    }
+
+    .nav__label{
+        cursor: pointer;
+    }
+
+        .nav__radio{
+            display: none;
+        }
+
+        .nav__display{
+            width: 100%;
+            height: 100%;
+            background: rgb(54, 97, 56);
+        }
+
+        .nav__title{
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav__radio:checked + .nav__display{
+            background: rgb(120, 196, 124);
+        }
+
+
+#setGuide > .guideForm{
+    margin-top: 15px;
+}
+
+    .guideForm__margin{
+        display: block;
+    }
+
+        .guideForm__margin >.guideForm__input{
+            width: 50px;
+        }
 
 .hide{
     display: none;
-}
+}   
 
 
 /*
@@ -51,3 +149,11 @@ by the settings of the CC application
     color:inherit;
     font-size:inherit;
 }
+
+.topcoat-button{
+    background: rgb(49, 49, 49);
+}
+    .topcoat-button:hover{
+        background: rgb(30,30,30);
+        cursor: pointer;
+    }
