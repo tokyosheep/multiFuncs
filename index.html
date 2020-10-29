@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+        
+<link rel="stylesheet" href="css/topcoat-desktop-dark.min.css"/>
+<link  id="hostStyle" rel="stylesheet" href="css/styles.css"/>
+
+<title>multi funcs</title>
+</head>
+
+<body class="hostElt">
+    <div id="loading" class="loading hide">
+        <div class="loading__circle"></div>
+        <span class="loading__title">...loading</span>
+    </div>
+    <div class="container">
+        <nav class="nav">
+            <form name="nav" class="nav__form">
+                <ul class="nav__link">
+                    <li>
+                        <label for="setGuide" class="nav__label">
+                            <input type="radio" class="nav__radio" name="tab" value="setGuide" id="setGuide" checked="true"/>
+                            <div class="nav__display"></div>
+                            <span class="nav__title">set guide</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="makeHead" class="nav__label">
+                            <input type="radio" class="nav__radio" name="tab" value="makeHead" id="makeHead" />
+                            <div class="nav__display"></div>
+                            <span class="nav__title">make head</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="strage" class="nav__label">
+                            <input type="radio" class="nav__radio" name="tab" value="strage"  id="strage" />
+                            <div class="nav__display"></div>
+                            <span class="nav__title">strage</span>
+                        </label>
+                    </li>
+                </ul>
+            </form>
+        </nav>
+        <!---------------------------------------->     
+        <main class="main" id="setGuide">
+            <header class="header">
+                <h1 class="head-large">set guide</h1>
+            </header>
+            <button class="topcoat-button" id="setCenter">set center guides</button>
+            <div class="guideForm">
+                <h2 class="head-small">guide form</h2>
+                <label class="guideForm__margin">
+                    <input type="number" class="topcoat-text-input guideForm__input" id="marginValue" value="0" min="0" />
+                    margin space
+                </label>
+                <form name="unitForm" class="guideUnit">
+                    <label for="mm" class="topcoat-radio-button">
+                        <input type="radio" name="unit" id="mm" checked="true" value="mm">
+                        <div class="topcoat-radio-button__checkmark"></div>
+                        mm
+                    </label>
+                    <label for="point" class="topcoat-radio-button">
+                        <input type="radio" name="unit" id="point" value="point">
+                        <div class="topcoat-radio-button__checkmark"></div>
+                        point
+                    </label>
+                    <label for="centi" class="topcoat-radio-button">
+                        <input type="radio" name="unit" id="centi" value="centi">
+                        <div class="topcoat-radio-button__checkmark"></div>
+                        centi
+                    </label>
+                </form>
+                <button class="topcoat-button" id="marginGuide">set margin guide</button>
+            </div>
+        </main>
+        <!---------------------------------------->
+        <main class="main hide" id="makeHead">
+            <header class="header">
+                <h1 class="head-large">make head</h1>
+            </header>
+            <button class="topcoat-button" id="makeHeadOnDoc">make head</button>
+            <form name="headForm" class="headForm">
+                <label for="setDate" class="topcoat-checkbox">
+                    <input type="checkBox" name="headOption" class="headForm__option" id="setDate">
+                    <div class="topcoat-checkbox__checkmark"></div>
+                    set date
+                </label>
+                <label for="setLength" class="topcoat-checkbox">
+                    <input type="checkBox" name="headOption" class="headForm__option" id="setLength">
+                    <div class="topcoat-checkbox__checkmark"></div>
+                    set length
+                </label>
+            </form>
+        </main>
+        <!---------------------------------------->
+        <main class="main hide" id="strage">
+            <header class="header">
+                <h1 class="head-large">strage</h1>
+            </header>
+            <div class="colorList">
+                <ul class="CMYKList">
+                    <li><input type="number" class="topcoat-text-input CMYK colorList__input" id="cyan" max="100" min="0" value="0" step="0.1"><span class="colorList__name">cyan</span></li>
+                    <li><input type="number" class="topcoat-text-input CMYK colorList__input" id="magenta" max="100" min="0" value="0" step="0.1"><span class="colorList__name">magenta</span></li>
+                    <li><input type="number" class="topcoat-text-input CMYK colorList__input" id="yellow" max="100" min="0" value="0" step="0.1"><span class="colorList__name">yellow</span></li>
+                    <li><input type="number" class="topcoat-text-input CMYK colorList__input" id="black" max="100" min="0" value="0" step="0.1"><span class="colorList__name">black</span></li>
+                </ul>
+                <ul class="RGBList">
+                    <li><input type="number" class="topcoat-text-input RGB colorList__input" id="red" max="255" min="0" value="0" step="0.1"><span class="colorList__name">red</span></li>
+                    <li><input type="number" class="topcoat-text-input RGB colorList__input" id="green" max="255" min="0" value="0" step="0.1"><span class="colorList__name">green</span></li>
+                    <li><input type="number" class="topcoat-text-input RGB colorList__input" id="blue" max="255" min="0" value="0" step="0.1"><span class="colorList__name">blue</span></li>
+                </ul>
+            </div>
+            <button class="topcoat-button" id="loadColor">load color</button>
+            <button class="topcoat-button" id="pasteColor">paste color</button>
+        </main>
+        <!---------------------------------------->
+        <footer class="footer">
+            <small>developed by kawano</small> 
+        </footer>
+    </div>
+    <!-- These are debugging shortcuts.  Class debuglink items only appear in debug mode  -->
+    <!---
+    <span class="debuglink" id="reload">Reload</span>
+    <span class="debuglink" id="debug">Debug</span>
+    <span class="debuglink" id="sources">Sources</span>
+    -->
+</body>
+    <script src="js/libs/CSInterface.js"></script>
+    <script src="js/themeManager.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/fileSystem/connectJSX.js"></script>
+    <script src="js/main.js"></script>
+</html>
