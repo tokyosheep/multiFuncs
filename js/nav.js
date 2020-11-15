@@ -6,7 +6,6 @@ const addNavEvent = () =>{
         const navValue = document.nav.tab.value;
         console.log(navValue);
         mains.forEach(main=>{ 
-            console.log(main.id);
             if(main.id === navValue){//クリックした該当のモードのみ表示させる
                 main.classList.remove("hide");
             }else{
