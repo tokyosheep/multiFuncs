@@ -16,17 +16,7 @@ ul{
     list-style: none;
     padding: 0;
 }
-/*
-.head-large{
-    margin: 5px 0;
-    font-size: 25px;
-}
 
-.head-small{
-    margin: 2px;
-    font-size: 13px;
-}
-*/
 .container{
     display: grid;
     grid-template-columns: 100%;
@@ -99,19 +89,7 @@ ul{
             background: rgb(120, 196, 124);
         }
 
-/*
-#setGuide > .guideForm{
-    margin-top: 15px;
-}
 
-    .guideForm__margin{
-        display: block;
-    }
-
-        .guideForm__margin >.guideForm__input{
-            width: 50px;
-        }
-*/
 .hide{
     display: none;
 }   
