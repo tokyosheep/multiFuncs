@@ -1,10 +1,5 @@
 /*Your styles*/
 
-@import url("./color.css");
-@import url("./guide.css");
-@import url("./head.css");
-
-@import url("./loading.css");
 body {
     margin: 0;
 }
