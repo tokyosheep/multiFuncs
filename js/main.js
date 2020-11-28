@@ -42,7 +42,7 @@ window.onload=()=>{
         const jsxes = parts.filter(f => path.extname(f) === ".jsx");//jsxファイル以外取り除く
         jsxes.forEach(jsx =>  csInterface.evalScript(`$.evalFile("${partial}/${jsx}")`));//partialフォルダー内の外部jsxファイルを事前に読み込み
         csInterface.evalScript(`$.evalFile("${extensionRoot}json2.js")`);//json2読み込み
-        csInterface.addEventListener("com.adobe.csxs.events.WindowVisibilityChanged",()=>{location.reload(true)},false);//デバッグ用ウインドウオープンイベント
+        //csInterface.addEventListener("com.adobe.csxs.events.WindowVisibilityChanged",()=>{location.reload(true)},false);//デバッグ用ウインドウオープンイベント
         themeManager.init();
     }
     init();
