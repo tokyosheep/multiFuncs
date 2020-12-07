@@ -49,74 +49,11 @@ function hostScript(obj/*main.jsから渡されるオブジェクト*/){
     return true;//なんでも良いので値をmain.jsに返すとエラー発生時にconsoleにjsx内のエラー内容を表示してれる。
 
     function makeHead(option){
-        var selects = app.activeDocument.selection;
-        if(option.setLength&&selects.length !== 1){
-            alert("please select just an item");
-            return false;
-        }
-        var select = selects[0];
-        var keyColor = {
-            cyan:0,
-            magenta:0,
-            yellow:0,
-            black:100
-        }
-        var black = setCMYK(keyColor);//黒色のカラーをセットする
-        var headLayer = app.activeDocument.layers.add();
-        headLayer.name = "head";
-        var contents = (option.setLength ? getLength(select) : "") +　(option.setLength&&option.setDate ? " : " : "" ) + (option.setDate ? getDate() : "");
-        var textObj = activeDocument.textFrames.add();
-        textObj.contents = contents;
-        textObj.paragraphs[0].size = fontSize; // 64pt 
-        textObj.left = 0;
-        textObj.top = 0;
-        function getLength(select){
-            var height = Math.floor((select.height*point)*100)/100;
-            var width = Math.floor((select.width*point)*100)/100;
-            var header = app.activeDocument.textFrames.add();
-            return height + "mm X "+ width + "mm";
-        }
-        function getDate(){//現在の日時を返す
-            var dObj = new Date();//create date object
-            var m = dObj.getMonth() + 1;
-            var d = dObj.getDate();
-            var h = dObj.getHours();
-            var minute = dObj.getMinutes();
-            return m + "月 " + d + "日 " + h +"時 " + minute + "分";
-        }
+        /*後で書く*/
     }
 
     function pasteColor(option){
-        var Square = function(obj,num,left){
-            this.size = 50 * mm;
-            this.item = activeDocument.activeLayer.pathItems.rectangle(//カラー用スクエアのパスアイテムをセットする
-                /*item.top*/-(num*(this.size+70)),
-                /*item.left*/left,
-                this.size,
-                this.size
-            );
-            this.item.filled = true;
-            this.item.stroked = false;
-            this.obj = obj;
-            this.item.fillColor = this.setColor();
-        }
-
-        Square.prototype.setColor = function(){
-            switch(this.obj.type){//カラーオブジェクトをセットする
-                case "CMYK":
-                return setCMYK(this.obj);
-                case "RGB":
-                return setRGB(this.obj);
-                case "Gray":
-                return setGray(this.obj);
-                default:
-                return setGray({gray:0});//何も該当しなければ無地のグレーを返す 理論上RGBかCMYKしかここに渡されないが念のため
-            }
-        }
-        var newLayer = app.activeDocument.layers.add();//置き換えた色のレイヤーを作成
-        newLayer.name = "fill";
-        var filledObj = new Square(option,0,0);
-        filledObj.item.move(newLayer, ElementPlacement.PLACEATBEGINNING);
+        /*後で書く*/
     }
     function setGuide(option){
         try{
