@@ -1,22 +1,18 @@
-/*
 //デバッグ時はincludeで外部scriptを読み込む
+/*
 #include "partial/setColor.jsx";
 #include "partial/setGuide.jsx";
 
-var obj = {
-    "type": "pasteColor",
+var obj =　{
+    "type": "setGuide",
     "option": {
-        "cyan": "59",
-        "magenta": "78",
-        "yellow": "0",
-        "black": "0",
-        "type": "CMYK"
+        "unit": "mm",
+        "margin": "15"
     }
-}//pasteColorメソッド用　debug用のオブジェクト
+}
+
 hostScript(obj);
 */
-//ここのコメントアウトを外すとpasteColorメソッドがExtendScript Debuggerでデバッグできます。
-//writelnメソッドも使えます。
 
 function hostScript(obj/*main.jsから渡されるオブジェクト*/){
     if(1 > app.documents.length){//ドキュメントが一つも開いてなかったら中止

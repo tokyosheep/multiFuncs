@@ -36,6 +36,8 @@ window.onload=()=>{
         const margin = document.getElementById("marginValue").value;
         console.log(unit);
         try{
+            /*デバッグ用　json書き出しメソッド*/
+            fs.writeFileSync(`${extensionRoot}/data.json`,JSON.stringify({type:"setGuide",option:{unit:unit,margin:margin}}));
             const result = await hostProcess({type:"setGuide",option:{unit:unit,margin:margin}});
             console.log(result);
         }catch(e){
