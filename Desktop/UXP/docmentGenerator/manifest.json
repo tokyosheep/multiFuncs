@@ -1,0 +1,41 @@
+{
+  "id": "docGenerator.com",
+  "name": "docmentGenerator",
+  "version": "1.0.0",
+  "host": [
+    {
+      "app": "PS",
+      "minVersion": "22.0.0"
+    }
+  ],
+  "main": "index.html",
+  "manifestVersion": 4,
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "vanilla",
+      "label": {
+        "default": "document generator"
+      },
+      "minimumSize": {
+        "width": 120,
+        "height": 140
+      },
+      "maximumSize": {
+        "width": 1200,
+        "height": 10000
+      },
+      "preferredDockedSize": {
+        "width": 150,
+        "height": 200
+      },
+      "preferredFloatingSize": {
+        "width": 300,
+        "height": 200
+      },
+      "commands": [
+        
+      ]
+    }
+  ]
+}
