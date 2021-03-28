@@ -1,0 +1,43 @@
+{
+  "name": "IconDrop",
+  "version": "1.0.0",
+  "description": "",
+  "build":{
+    "files": [
+      "index.html",
+      "index.js",
+      "./render",
+      "./node_modules"
+    ],
+    "appId": "dropIcon",
+    "mac":{
+      "extendInfo":{
+        "CFBundleDocumentTypes":[
+          {
+            "CFBundleTypeName":"All Files",
+            "LSHandlerRank":"Owner",
+            "LSItemContentTypes":[
+              "public.pdf",
+              "public.text",
+              "public.data",
+              "public.content"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "electron index.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^12.0.2",
+    "electron-builder": "^22.10.5"
+  }
+}
